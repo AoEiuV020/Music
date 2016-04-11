@@ -2,6 +2,7 @@ package com.aoeiuv020.music;
 import com.aoeiuv020.tool.Logger;
 
 import android.app.Activity;
+import android.app.*;
 import android.os.Bundle;
 import android.widget.*;
 import android.content.*;
@@ -20,6 +21,8 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 	ImageButton ibPlay=null;
 	MediaMetadataRetriever mMediaMetadataRetriever=new MediaMetadataRetriever();
 	View vOpen=null;
+	Notification mNotification=null;
+	NotificationManager mNotificationManager=null;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -29,10 +32,46 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 		setContentView(R.layout.main);
 		findView();
 		set();
+		initNotification();
 		Intent intent=getIntent();
 		if(intent!=null)
 			onNewIntent(intent);
     }
+	public void initNotification()
+	{
+		mNotificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+		RemoteViews remoteViews=new RemoteViews(getPackageName(),R.layout.layout_notification);
+		remoteViews.setImageViewResource(R.id.notification_image,R.drawable.ic_launcher);
+		Intent intent=new Intent(this,this.getClass());
+		PendingIntent pIntent=PendingIntent.getActivity(this,0,intent,0);
+		/*
+		 * .setSmallIcon.setContentTitle.setContentText
+		 * 这些没用，但是好像不设置不行，
+		 */
+		mNotification=new Notification.Builder(this)
+			.setSmallIcon(R.drawable.ic_launcher)
+			.setContentTitle("title")
+			.setContentText("text")
+			.setOngoing(true)
+			.setContentIntent(pIntent)
+			.setContent(remoteViews)
+			.build();
+		//mNotification.flags=Notification.FLAG_ONGOING_EVENT;
+		//mNotification.contentIntent=pIntent;
+		//mNotification.contentView=remoteViews;
+	}
+	@Override
+	public void onStart()
+	{
+		super.onStart();
+		mNotificationManager.cancel(0);
+	}
+	@Override
+	public void onStop()
+	{
+		super.onStop();
+		mNotificationManager.notify(0,mNotification);
+	}
 	private void set()
 	{
 		ibPlay.setOnClickListener(this);
