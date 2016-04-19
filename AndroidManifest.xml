@@ -23,5 +23,8 @@
                 <data android:mimeType="audio/*"/>
             </intent-filter>
         </activity>
+		<service android:name=".AudioPlayerService"
+			>
+		</service>
     </application>
 </manifest>

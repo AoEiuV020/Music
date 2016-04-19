@@ -4,3 +4,5 @@ gen/
 obj/
 ant.properties
 .keystore
+todo
+nohup.txt

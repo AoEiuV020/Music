@@ -1,0 +1,365 @@
+Buildfile: /mnt/ext/code/git/Music/build.xml
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 25.1.0
+ [checkenv] Installed at /opt/android-sdk
+
+-setup:
+     [echo] Project Name: Music
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 24.0.0 rc2
+     [echo] Resolving Build Target for Music...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+[gettarget] WARNING: No minSdkVersion value set. Application will install on all Android versions.
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for Music...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] No changes in the AndroidManifest files.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] No changed resources. R.java and Manifest.java untouched.
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] No need to generate new BuildConfig.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 2 source files to /mnt/ext/code/git/Music/bin/classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 3 warnings
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: /mnt/ext/code/git/Music/bin/classes
+      [dex] Found modified input file
+      [dex] Converting compiled files and external libraries into /mnt/ext/code/git/Music/bin/classes.dex...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /mnt/ext/code/git/Music/res
+   [crunch] To destination dir: /mnt/ext/code/git/Music/bin/res
+   [crunch] Crunched 0 PNG files to update cache
+
+-package-resources:
+     [aapt] No changed resources or assets. Music.ap_ remains untouched
+
+-package:
+[apkbuilder] Found modified input file
+[apkbuilder] Creating Music-debug-unaligned.apk and signing it with a debug key...
+
+-post-package:
+
+-do-debug:
+ [zipalign] Running zip align on final apk...
+     [echo] Debug Package: /mnt/ext/code/git/Music/bin/Music-debug.apk
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+
+-post-build:
+
+debug:
+
+install:
+     [echo] Installing /mnt/ext/code/git/Music/bin/Music-debug.apk onto default emulator or device...
+     [exec] 	pkg: /data/local/tmp/Music-debug.apk
+     [exec] Success
+
+-xml:
+
+-myenv:
+
+run:
+     [exec] Starting: Intent { cmp=com.aoeiuv020.music/.Main }
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 12 seconds
+Buildfile: /mnt/ext/code/git/Music/build.xml
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 25.1.0
+ [checkenv] Installed at /opt/android-sdk
+
+-setup:
+     [echo] Project Name: Music
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 24.0.0 rc2
+     [echo] Resolving Build Target for Music...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+[gettarget] WARNING: No minSdkVersion value set. Application will install on all Android versions.
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for Music...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] No changes in the AndroidManifest files.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] No changed resources. R.java and Manifest.java untouched.
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] No need to generate new BuildConfig.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 3 source files to /mnt/ext/code/git/Music/bin/classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /mnt/ext/code/git/Music/src/com/aoeiuv020/music/AudioPlayerService.java:37: error: unreported exception MalformedMimeTypeException; must be caught or declared to be thrown
+    [javac] 		filter.addDataType(BroadcastReceiverConstants.TYPE);
+    [javac] 		                  ^
+    [javac] 1 error
+    [javac] 3 warnings
+
+BUILD FAILED
+/opt/android-sdk/tools/ant/build.xml:716: The following error occurred while executing this line:
+/opt/android-sdk/tools/ant/build.xml:730: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Buildfile: /mnt/ext/code/git/Music/build.xml
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 25.1.0
+ [checkenv] Installed at /opt/android-sdk
+
+-setup:
+     [echo] Project Name: Music
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 24.0.0 rc2
+     [echo] Resolving Build Target for Music...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+[gettarget] WARNING: No minSdkVersion value set. Application will install on all Android versions.
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for Music...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] No changes in the AndroidManifest files.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] No changed resources. R.java and Manifest.java untouched.
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] No need to generate new BuildConfig.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 3 source files to /mnt/ext/code/git/Music/bin/classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /mnt/ext/code/git/Music/src/com/aoeiuv020/music/AudioPlayerService.java:23: error: cannot find symbol
+    [javac] 	private PlayReceiver mReceiver=null;
+    [javac] 	        ^
+    [javac]   symbol:   class PlayReceiver
+    [javac]   location: class AudioPlayerService
+    [javac] /mnt/ext/code/git/Music/src/com/aoeiuv020/music/AudioPlayerService.java:68: error: incompatible types: unexpected return value
+    [javac] 			return null;
+    [javac] 			       ^
+    [javac] 2 errors
+    [javac] 3 warnings
+
+BUILD FAILED
+/opt/android-sdk/tools/ant/build.xml:716: The following error occurred while executing this line:
+/opt/android-sdk/tools/ant/build.xml:730: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Buildfile: /mnt/ext/code/git/Music/build.xml
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 25.1.0
+ [checkenv] Installed at /opt/android-sdk
+
+-setup:
+     [echo] Project Name: Music
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 24.0.0 rc2
+     [echo] Resolving Build Target for Music...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+[gettarget] WARNING: No minSdkVersion value set. Application will install on all Android versions.
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for Music...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+   [subant] No sub-builds to iterate on
+
+-code-gen:
+[mergemanifest] No changes in the AndroidManifest files.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] No changed resources. R.java and Manifest.java untouched.
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] No need to generate new BuildConfig.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 1 source file to /mnt/ext/code/git/Music/bin/classes
+    [javac] warning: [options] source value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.5 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] 3 warnings
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: /mnt/ext/code/git/Music/bin/classes
+      [dex] Found modified input file
+      [dex] Converting compiled files and external libraries into /mnt/ext/code/git/Music/bin/classes.dex...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /mnt/ext/code/git/Music/res
+   [crunch] To destination dir: /mnt/ext/code/git/Music/bin/res
+   [crunch] Crunched 0 PNG files to update cache
+
+-package-resources:
+     [aapt] No changed resources or assets. Music.ap_ remains untouched
+
+-package:
+[apkbuilder] Found modified input file
+[apkbuilder] Creating Music-debug-unaligned.apk and signing it with a debug key...
+
+-post-package:
+
+-do-debug:
+ [zipalign] Running zip align on final apk...
+     [echo] Debug Package: /mnt/ext/code/git/Music/bin/Music-debug.apk
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+[propertyfile] Updating property file: /mnt/ext/code/git/Music/bin/build.prop
+
+-post-build:
+
+debug:
+
+install:
+     [echo] Installing /mnt/ext/code/git/Music/bin/Music-debug.apk onto default emulator or device...
+     [exec] 	pkg: /data/local/tmp/Music-debug.apk
+     [exec] Success
+
+-xml:
+
+-myenv:
+
+run:
+     [exec] Starting: Intent { cmp=com.aoeiuv020.music/.Main }
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 16 seconds

@@ -1,0 +1,4 @@
+广播带data的Intent时，
+接收器的过滤器不能不addDataType，
+也许addData开头的方法都可以，
+总之要有Data的过滤方法，

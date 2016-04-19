@@ -11,6 +11,7 @@
 		android:layout_height="wrap_content"
 		android:src="@drawable/music_play"
 		android:scaleType="fitCenter"
+		android:background="#00000000"
 		/>
 	<LinearLayout
 		android:orientation="vertical"
@@ -26,6 +27,13 @@
 			android:gravity="center"
 			android:text="歌名"
 			/>
+		<TextView
+			android:id="@+id/notification_author"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="作者"
+			/>
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="vertical"
@@ -39,6 +47,7 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:src="@android:drawable/ic_media_play"
+			android:background="#00000000"
 			/>
 	</LinearLayout>
 </LinearLayout>
