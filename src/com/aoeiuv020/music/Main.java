@@ -25,6 +25,7 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 	TextView tvTime=null;
 	SeekBar pbProgress=null;
 	ImageButton ibPlay=null;
+	ImageButton ibList=null;
 	MediaMetadataRetriever mMediaMetadataRetriever=new MediaMetadataRetriever();
 	View vOpen=null;
 	Intent mServiceIntent=new Intent();
@@ -108,6 +109,7 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 	{
 		mServiceIntent.setClass(this,AudioPlayerService.class);
 		ibPlay.setOnClickListener(this);
+		ibList.setOnClickListener(this);
 		vOpen.setOnClickListener(this);
 		pbProgress.setOnSeekBarChangeListener(this);
 	}
@@ -117,6 +119,7 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 		Logger.v("onSeek %d/%d",current,duration);
 		pbProgress.setMax(duration);
 		pbProgress.setProgress(current);
+		setTime(current,duration);
 	}
 	private void setTime(int current,int duration)
 	{
@@ -188,6 +191,11 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 				intent.setAction(Intent.ACTION_GET_CONTENT);
 				startActivityForResult(intent,0);
 				break;
+			case R.id.list:
+				intent=new Intent();
+				intent.setClass(this,PlayList.class);
+				startActivityForResult(intent,0);
+				break;
 		}
 	}
 	@Override
@@ -215,6 +223,7 @@ public class Main extends Activity implements View.OnClickListener,MediaPlayer.O
 		tvAuthor=(TextView)findViewById(R.id.author);
 		tvTime=(TextView)findViewById(R.id.time);
 		ibPlay=(ImageButton)findViewById(R.id.play);
+		ibList=(ImageButton)findViewById(R.id.list);
 		vOpen=findViewById(R.id.open);
 		pbProgress=(SeekBar)findViewById(R.id.progress);
 	}

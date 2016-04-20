@@ -109,20 +109,19 @@ public class AudioPlayerService extends Service implements MediaPlayer.OnComplet
 		if(intent==null)
 			return ;
 		Uri uri=intent.getData();
-		if(uri!=null)
+		if(uri==null)
+			return;
+		mDataUri=uri;
+		try
 		{
-			mDataUri=uri;
-			try
-			{
-				mMediaPlayer.reset();
-				mMediaPlayer.setDataSource(this,uri);
-				mMediaPlayer.prepare();
-				mMediaPlayer.start();
-			}
-			catch(IOException e)
-			{
-				Logger.e(e);
-			}
+			mMediaPlayer.reset();
+			mMediaPlayer.setDataSource(this,uri);
+			mMediaPlayer.prepare();
+			mMediaPlayer.start();
+		}
+		catch(IOException e)
+		{
+			Logger.e(e);
 		}
 		sendMetadata();
 		sendStatus();
@@ -132,6 +131,7 @@ public class AudioPlayerService extends Service implements MediaPlayer.OnComplet
 		}
 		mProgressThread=new ProgressThread(this,mMediaPlayer);
 		mProgressThread.start();
+		MusicProvider.add(this,uri);
 	}
 	public void seekTo(int progress)
 	{
