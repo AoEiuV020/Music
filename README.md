@@ -8,3 +8,4 @@
 2,调用歌词api下载显示歌词，  
 3,多个播放列表，  
 
+![img](screen/main.jpg)
