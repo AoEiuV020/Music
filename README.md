@@ -5,6 +5,7 @@
 3. 使用MediaMetadataRetriever获取音乐的信息  
 4. 使用Service后台播放  
 5. 使用SeekBar调整进度  
+6. 使用Notification展示自定义通知
 
 安卓练手项目，  
 作为一款轻量级播放器打算上线，  
